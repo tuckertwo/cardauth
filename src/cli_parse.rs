@@ -36,12 +36,10 @@ pub enum Commands {
         hash: bool,
     },
     Auth {
-        #[arg(short, long, default_value="users.toml")]
+        #[arg(short='f', long, default_value="users.toml")]
         users_file: Input,
 
-        #[arg(short, long, default_value="true",
-            action = clap::ArgAction::Set,
-            value_parser = clap::builder::BoolishValueParser::new())]
+        #[arg(short, long)]
         exit_on_pwd: bool,
 
         #[arg(env="PAM_USER")]
