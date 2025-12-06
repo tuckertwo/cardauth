@@ -1,0 +1,20 @@
+[package]
+name = "cardauth"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argon2 = { version = "0.5.3", features = ["std"] }
+async-hid = "0.4.4"
+clap = { version = "4.5.53", features = ["derive", "env", "unicode"] }
+clap_complete = "4.5.61"
+clio = { version = "0.3.5", features = ["clap-parse"] }
+futures-lite = "2.6.1"
+pollster = { version = "0.4.0", features = ["macro"] }
+tokio = { version = "1.48.0", features = ["full", "macros", "time"] }
+toml = "0.9.8"
+
+[build-dependencies]
+clap = { version = "4.5.53", features = ["derive", "env", "unicode"] }
+clap_complete = "4.5.61"
+clio = { version = "0.3.5", features = ["clap-parse"] }
